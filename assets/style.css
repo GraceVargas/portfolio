@@ -1,0 +1,493 @@
+
+/********** Fonts **********/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600;700;800&display=swap');
+
+/********** Layout **********/
+
+*,*::before,*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;  
+    color: rgb(87, 87, 87);
+    background-color: #F2F2F2;
+    font-size: 16px;
+}
+
+a, a:hover, a:active {
+    text-decoration: none;
+    color: #551A8B;
+}
+
+
+/*****
+****** Background Colors
+******/
+
+.bg-color-dark {
+    background-color: #8338ec;
+    color: white;
+}
+
+.bg-color-light {
+    background-color: #b4b0ff;
+}
+
+
+/*****
+****** Display
+******/
+
+.disp-flex {
+    display: flex;
+}
+
+.disp-inline-flex {
+    display: inline-flex;
+}
+
+.disp-block{
+    display: block;
+}
+
+.disp-inline-block {
+    display: inline-block;
+}
+
+.center {
+    text-align:center;
+    align-items: center;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+} 
+
+
+/*****
+****** Lists
+******/
+
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.list-nav {
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+
+/*****
+****** Buttons
+******/
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+}
+
+.btn-pr {
+    background-color: #8338ec;
+    color: #fff;
+}
+
+.btn-footer {
+    color: #fff;
+    font-size: 14px;
+    padding: 5px 10px;
+}
+
+/* Button Hover */
+
+.btn:hover {
+    color: #8338ec;
+    transition: 50ms;
+}
+
+.btn-pr:hover {
+    color: white;
+    background-color: #ba63ff;
+    transition: 50ms;
+}
+
+.btn-footer:hover {
+    color: #fff;
+}
+
+/* Button Active */ 
+
+.btn-footer:active {
+    border-color: transparent;
+    box-shadow: 0px 0px 10px rgba(223, 216, 228, 0.952);
+}
+
+.btn:active {
+    border-color: #ba63ff;
+    box-shadow: 0px 0px 10px rgb(198, 143, 235);
+}
+
+/*****
+****** Cards
+******/
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: space-evenly;
+}
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: solid 1px lightgrey;
+    border-radius: 10px;
+}
+
+.card .logo {
+    height: 45%;
+}
+
+.card p {
+    font-weight: 900;
+    font-size: 1.10em; 
+}
+
+/* Card Hover */ 
+
+.card:hover {
+    border-color: #8338ec;
+}
+
+.card:hover p {
+    color: #8338ec;
+    transition: 50ms;
+}
+
+
+/* Cards - Skills */
+
+.cards.skills {
+    width: 70%;
+}
+
+.cards.skills .card {
+    width: 240px;
+    height: 240px;
+}
+
+/* Cards - Proyects */ 
+
+.cards.proyects {
+    width: 90%;
+}
+
+.cards.proyects .card {
+    width: 300px;
+    height: 300px;
+}
+
+.cards.proyects .card:active  {
+    box-shadow: 0px 0px 10px rgb(198, 143, 235);
+}
+
+/*****
+****** Layout Sections
+******/ 
+
+.divider-section {
+    padding-top: 90px;
+}
+
+.container {
+    max-width: calc(100% - 100px);
+    /* width: 90%; */
+    min-height: 130vh;
+    padding: 30px;
+    margin: auto;   
+}
+
+.col-50 {
+    width: 50%;
+    padding: 20px;
+}
+
+/* Fonts */
+
+.text-section {
+    width: 50%;
+    margin: auto;
+    line-height: 1.4;
+}
+
+.title-section {
+    color: black;
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+
+
+/* usar atributo data */
+
+
+/*****
+****** Header
+******/
+
+.header {
+    position: sticky;
+    top: 0;
+    padding: 30px;
+    box-shadow: 0px 0px 17px rgb(235, 230, 230);
+}
+
+
+.navbar {
+    margin-left: auto;
+    max-width: 55%;
+}
+
+
+
+/*****
+****** Introduction
+******/
+
+.intro {
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.4;
+}
+
+.text-intro h1 {
+    color: #333;
+    font-weight: 700;
+    font-size: 2em;
+}
+
+#name {
+    color: #536DFE;
+    font-weight: 800;
+    font-size: 47px;
+    font-style: normal;
+}
+
+.intro .btn-pr {
+    display: inline-block;
+    margin: 20px;
+}
+
+
+.img-wrapper img{ 
+    width: 100%;
+    max-width: 500px;
+} 
+
+
+/*****
+******  Quote
+******/
+
+.quote {
+    min-height: 80vh;
+}
+
+.text-quote {
+    width: 70%;
+    margin: auto;
+}
+
+.text-quote img {
+    width: 100px;
+    margin: auto;
+}
+
+.text-quote cite {
+    margin: 50px;
+    font-style: normal;
+    font-size: 25px;
+    line-height: 1.6;
+}
+
+.author-cite {
+    font-size: 30px;
+    font-weight: 900;
+}
+
+/*****
+******  Contact & Form
+******/
+
+ #contact .box {
+    margin: auto;
+    padding: 15px;
+    background-color: white;
+    border: solid 1px lightgrey;
+    border-radius: 10px;
+}
+
+#contact .btn {
+    text-transform: none;
+    margin: 2px;
+}
+
+#contact .btn:hover .social-icon {
+color: white;
+background-color: #8338ec;
+transition: 50ms;
+}
+
+/* Form */
+
+#contact .box label {
+    font-weight: 700;
+    color: black;
+    padding: 5px;
+}
+
+.name-wrapper-item {
+    flex-grow: 1;
+}
+
+#contact .box input, textarea {
+    width: 100%;
+    background-color: #F2F2F2;
+    border-radius: 17px;
+    border: 1px solid transparent;
+    text-transform: none;
+    padding: 10px 20px;
+    margin: 2px;
+} 
+
+#contact .box input:focus, 
+#contact .box input:focus-visible,
+#contact .box textarea:focus, 
+#contact .box textarea:focus-visible {
+    border-color: #ba63ff;
+    box-shadow: 0px 0px 10px rgb(198, 143, 235);
+    outline: none;
+}
+
+/* Contact */
+
+.social-icon {
+    font-size: 1.2em;
+    margin: 0 10px;
+    padding: 10px;
+    border: 1px solid transparent;
+    border-radius: 50px;
+    color: #8338ec;
+}
+
+
+/*****
+******  Footer
+******/
+
+.footer {
+    height: 250px;
+    justify-content: center;
+}
+
+
+.footer-container {
+    width: 45%;
+    justify-content: center;
+}
+
+
+.footer .social-icon {
+    font-size: 1.2em;
+    margin: 0 10px;
+    border-radius: 50px;
+    color: #8338ec;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid transparent;
+}
+
+.footer .social-icon:hover {
+    color: #fff;
+    background-color: #8338ec;
+    border-color: #fff;
+}
+
+.footer .social-icon:active {
+    box-shadow: 0px 0px 10px rgba(223, 216, 228, 0.952);
+}
+
+.footer .list {
+    margin: 20px 0;
+}
+
+
+
+
+/*****
+****** Responsive
+******/
+
+
+/* Extra large devices (large desktops, 1200px and up) */ 
+
+@media(max-width:1200px) {
+    .header {
+        display: none;
+    }
+
+    .container {
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .col-50 {
+        width: 100%;
+    }
+
+    .img-wrapper {
+        margin: auto;
+    }
+
+    #contact .col-50 {
+        text-align: left;
+    }
+}
+
+
+/* Large devices (desktops, 992px and up) */
+
+@media(max-width:992px) { 
+    .box {
+        flex-wrap: wrap;
+    } 
+}
+
+
+/* Medium devices (tablets, 768px and up) */
+
+@media(max-width:768px) {
+    .name-wrapper {
+        display: block;
+    }
+}
+
