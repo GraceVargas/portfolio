@@ -164,6 +164,7 @@ a, a:hover, a:active {
 
 .card .logo {
     height: 45%;
+    padding: 5px;
 }
 
 .card p {
@@ -190,6 +191,7 @@ a, a:hover, a:active {
 }
 
 .cards.skills .card {
+    min-width: 200px;
     width: 240px;
     height: 240px;
 }
@@ -201,12 +203,17 @@ a, a:hover, a:active {
 }
 
 .cards.proyects .card {
+    min-width: 240px;
     width: 300px;
     height: 300px;
 }
 
 .cards.proyects .card:active  {
     box-shadow: 0px 0px 10px rgb(198, 143, 235);
+}
+
+.cards.proyects p, .cards.proyects img {
+padding: 3px;
 }
 
 /*****
@@ -233,20 +240,18 @@ a, a:hover, a:active {
 /* Fonts */
 
 .text-section {
-    width: 50%;
+    width: 85%;
     margin: auto;
     line-height: 1.4;
 }
 
 .title-section {
+    display: flex;
+    justify-content: center;
     color: black;
     font-size: 2.5rem;
     font-weight: 800;
 }
-
-
-
-/* usar atributo data */
 
 
 /*****
@@ -294,7 +299,8 @@ a, a:hover, a:active {
 
 .intro .btn-pr {
     display: inline-block;
-    margin: 20px;
+    margin-top: 20px;
+    white-space: nowrap;
 }
 
 
@@ -323,7 +329,7 @@ a, a:hover, a:active {
 }
 
 .text-quote cite {
-    margin: 50px;
+    margin-top: 50px;
     font-style: normal;
     font-size: 25px;
     line-height: 1.6;
@@ -333,6 +339,17 @@ a, a:hover, a:active {
     font-size: 30px;
     font-weight: 900;
 }
+
+
+/*****
+******  Experience
+******/
+
+#experience {
+    height: 300px;
+}
+
+
 
 /*****
 ******  Contact & Form
@@ -377,6 +394,7 @@ transition: 50ms;
     text-transform: none;
     padding: 10px 20px;
     margin: 2px;
+    font-family: 'Montserrat', sans-serif;
 } 
 
 #contact .box input:focus, 
@@ -408,13 +426,6 @@ transition: 50ms;
     height: 250px;
     justify-content: center;
 }
-
-
-.footer-container {
-    width: 45%;
-    justify-content: center;
-}
-
 
 .footer .social-icon {
     font-size: 1.2em;
@@ -488,6 +499,21 @@ transition: 50ms;
 @media(max-width:768px) {
     .name-wrapper {
         display: block;
+    }
+}
+
+/* Mobile (to 576px) */
+
+@media(max-width:576px) {
+    .title-section {
+        font-size: 1.8rem;
+        justify-content: start;
+    }
+
+    #contact li {
+        margin-left: -60px;
+        white-space: nowrap;
+        font-size: small;
     }
 }
 
