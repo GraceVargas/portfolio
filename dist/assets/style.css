@@ -196,6 +196,17 @@ a, a:hover, a:active {
     height: 240px;
 }
 
+.cards.skills {
+    transition: filter .5s ease-in-out;
+    -webkit-filter: grayscale(0%); 
+    filter: grayscale(0%); 
+  }
+  
+  .cards.skills .card:hover .logo {
+    -webkit-filter: grayscale(100%); 
+    filter: grayscale(100%); 
+  }
+
 /* Cards - Proyects */ 
 
 .cards.proyects {
@@ -260,6 +271,7 @@ padding: 3px;
 
 .header {
     position: sticky;
+    z-index: 2;
     top: 0;
     padding: 30px;
     box-shadow: 0px 0px 17px rgb(235, 230, 230);
