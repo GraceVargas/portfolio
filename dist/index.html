@@ -203,24 +203,24 @@
                         <h2 class="title-section">Escribime</h2>
 
 
-                        <form action="">
+                        <form action="https://formsubmit.co/gracielavargasg@gmail.com" method="POST">
 
                             <div class="name-wrapper disp-flex">
                                 <div class="name-wrapper-item disp-flex flex-wrap">
                                     <label for="f_name" class="disp-block">Nombre:</label>
-                                    <input type="text" name="f_name" id="f_name" class="disp-block" placeholder="p. ej.: Ada">   
+                                    <input type="text" name="f_name" id="f_name" class="disp-block" placeholder="p. ej.: Ada" required>   
                                 </div>
 
                                 <div class="name-wrapper-item disp-flex flex-wrap">
                                     <label for="l_name" class="disp-block">Apellido:</label>
-                                    <input type="text" name="l_name" id="l_name" class="disp-block" placeholder="p. ej.: Lovelace">   
+                                    <input type="text" name="l_name" id="l_name" class="disp-block" placeholder="p. ej.: Lovelace" required>   
                                 </div>
                             </div> 
 
 
                             <div>
                                 <label for="email" class="disp-block">Email:</label>
-                                <input type="email" name="email" id="email" class="disp-block" placeholder="p. ej.: ada.lovelace@gmail.com">   
+                                <input type="email" name="email" id="email" class="disp-block" placeholder="p. ej.: ada.lovelace@gmail.com" required>   
                             </div>
                             <div>
                                 <label for="message" class="disp-block">Mensaje:</label>
@@ -269,6 +269,21 @@
             <p>Hecho con 💙 por Grace</p>
         </div>
     </footer>
-
+    <!-- <script src="https://smtpjs.com/v3/smtp.js"></script> -->
+    <!-- <script>
+        const sendEmail = () => {
+            Email.send({
+                Host : "smtp.gmail.com",
+                Username : "gracielavargasg@gmail.com",
+                Password : "hkkdbqecbfcfardo",
+                To : 'gracielavargasg@gmail.com',
+                From : document.getElementById("email").value,
+                Subject : "New contact Form",
+                Body : document.getElementById("email").value
+            }).then(
+            message => alert(message)
+            );
+        }
+    </script> -->
 </body>
 </html>
