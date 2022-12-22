@@ -203,7 +203,7 @@
                         <h2 class="title-section">Escribime</h2>
 
 
-                        <form action="https://formsubmit.co/9351089e26a6d315d7d8d26c6b87e290" method="POST">
+                        <form action="https://formsubmit.co/9351089e26a6d315d7d8d26c6b87e290" method="POST"  onsubmit="modalOn()">
 
                             <div class="name-wrapper disp-flex">
                                 <div class="name-wrapper-item disp-flex flex-wrap">
@@ -248,10 +248,9 @@
   <script>
 
     let modal = document.getElementById("modal");
-    let modalBtn = document.getElementById("submitForm");
     let modalSpan = document.getElementsByClassName("closeModal")[0];
      
-    modalBtn.onclick = function() {
+    const modalOn = () => {
       modal.style.display = "block";
     }
     
