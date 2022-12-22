@@ -226,15 +226,47 @@
                                 <label for="message" class="disp-block">Mensaje:</label>
                                 <textarea name="message" id="message" cols="30" rows="10" class="disp-block" placeholder="Escriba un mensaje aqui"></textarea>  
                             </div>
-                            <button type="submit" class="btn btn-pr">Enviar</button>
+                            <button type="submit" class="btn btn-pr" id="submitForm">Enviar</button>
                             <input type="hidden" name="_next" value="https://gracevargas.github.io/portfolio/">
                             <input type="hidden" name="_captcha" value="false">
+                            <input type="text" name="_honey" style="display:none">
                         </form>    
                     </div>
                 </div>
             </div>
         </section>
     </main>
+
+    <!-- The Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+        <span class="closeModal">&times;</span>
+        <p>El formulario se envió correctamente. ¡Muchas gracias por tu contacto!</p>
+        </div>
+  </div>
+  
+  <script>
+
+    let modal = document.getElementById("modal");
+    let modalBtn = document.getElementById("submitForm");
+    let modalSpan = document.getElementsByClassName("closeModal")[0];
+     
+    modalBtn.onclick = function() {
+      modal.style.display = "block";
+    }
+    
+    modalSpan.onclick = function() {
+        modal.style.display = "none";
+    }
+    
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+    </script>
+    
+
 
     <!-- Footer -->
 
@@ -271,21 +303,6 @@
             <p>Hecho con 💙 por Grace</p>
         </div>
     </footer>
-    <!-- <script src="https://smtpjs.com/v3/smtp.js"></script> -->
-    <!-- <script>
-        const sendEmail = () => {
-            Email.send({
-                Host : "smtp.gmail.com",
-                Username : "gracielavargasg@gmail.com",
-                Password : "hkkdbqecbfcfardo",
-                To : 'gracielavargasg@gmail.com',
-                From : document.getElementById("email").value,
-                Subject : "New contact Form",
-                Body : document.getElementById("email").value
-            }).then(
-            message => alert(message)
-            );
-        }
-    </script> -->
+
 </body>
 </html>
